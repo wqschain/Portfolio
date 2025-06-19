@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
+
+A modern, minimalist portfolio website built with Next.js 15 and React, featuring fluid animations, interactive elements, and responsive design. The site showcases professional projects and technical skills through a clean, engaging interface.
+
+## Features
+
+### Core Features
+- Responsive design optimized for all device sizes
+- Dynamic page transitions and smooth scrolling
+- Interactive UI elements with magnetic hover effects
+- Dark theme optimization
+- Project showcase with video demonstrations
+- Skills section with interactive animations
+- Modern minimalist design language
+
+### Technical Implementations
+- Server-side rendering with Next.js 15
+- Fluid animations using Framer Motion
+- Type-safe development with TypeScript
+- Styling with TailwindCSS and CSS modules
+- Component library integration with Shadcn/UI
+- 3D effects using Three.js
+- Optimized performance with Next.js Image and Video components
+
+## Technology Stack
+
+### Frontend
+- Next.js 15.3.3
+- React 19.0.0
+- TypeScript 5
+- TailwindCSS 3.3.0
+- Framer Motion 12.16.0
+- Three.js 0.177.0
+- Shadcn/UI
+
+### Development Tools
+- ESLint
+- PostCSS
+- Autoprefixer
+- TurboPack
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout component
+│   ├── page.tsx           # Home page
+│   └── projects/          # Projects page
+├── components/            # Reusable components
+│   ├── Navigation.tsx     # Navigation component
+│   └── sections/          # Page sections
+│       ├── About.tsx      # About section
+│       ├── Hero.tsx       # Hero section
+│       ├── Projects.tsx   # Projects section
+│       └── Skills.tsx     # Skills section
+└── styles/               # Global styles
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18.0 or later
+- npm or yarn package manager
 
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/wqschain/Portfolio.git
+cd Portfolio
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+## Project Features
 
-To learn more about Next.js, take a look at the following resources:
+### Projects Showcase
+- Sentryx: AI-powered cryptocurrency sentiment analysis platform
+- Scrynt: Advanced stock market analysis platform
+- Portfolio: This website
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Interactive Elements
+- Magnetic hover effects on project tags
+- Smooth transitions between sections
+- Responsive navigation
+- Dynamic content loading
+- Video demonstrations of projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Performance Optimizations
 
-## Deploy on Vercel
+- Image optimization with Next.js Image component
+- Code splitting and lazy loading
+- Server-side rendering
+- Optimized asset loading
+- Efficient styling with TailwindCSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development Practices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Type-safe development with TypeScript
+- Component-based architecture
+- Responsive design principles
+- Modern JavaScript features
+- Clean code practices
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
