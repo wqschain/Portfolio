@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A modern, minimalist portfolio website built with Next.js 15 and React, featuring fluid animations, interactive elements, and responsive design. The site showcases professional projects and technical skills through a clean, engaging interface.
+A modern, minimalist portfolio website built with Next.js 15 and React, featuring fluid animations, interactive elements, and responsive design. The site showcases my professional projects and technical skills through a clean, engaging interface.
 
 ## Features
 
