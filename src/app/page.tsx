@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Hey, I'm Waqas Rana"],
+      strings: ["Hey, I&#39;m Waqas Rana"],
       typeSpeed: 50,
       showCursor: true,
       cursorChar: '|',
@@ -224,7 +224,7 @@ export default function Home() {
             <div className="w-full flex justify-center mt-8">
               <div className="max-w-[48ch] w-full text-center text-gray-300 text-sm md:text-base leading-relaxed px-4">
                 <p>
-                  I'm a third-year Computer Science student at the{' '}
+                  I&#39;m a third-year Computer Science student at the{' '}
                   <span className="inline-flex items-center gap-[0.3em]">
                     <span
                       className="uo-gradient-glow"
@@ -264,7 +264,7 @@ export default function Home() {
                   I enjoy solving problems, streamlining complexity, and delivering clear, reliable software that makes an impact.
                 </p>
                 <p className="mt-4">
-                  If you'd like to connect, collaborate, or just chat, feel free to reach out via the links above.
+                  If you&#39;d like to connect, collaborate, or just chat, feel free to reach out via the links above.
                 </p>
               </div>
             </div>

@@ -55,6 +55,7 @@ const projects = [
       "Vercel"
     ],
     date: "2024",
+    link: "https://github.com/wqschain/Portfolio",
     glow: true
   }
 ];
