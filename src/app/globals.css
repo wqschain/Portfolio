@@ -1,26 +1,254 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-start-rgb));
+    min-height: 100vh;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Typed.js cursor style */
+.typed-cursor {
+  color: #e2e8f0 !important;
+  opacity: 1;
+  font-weight: 300;
 }
+
+/* Gradient animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradientFlow 3s ease infinite;
+  background-size: 200% auto;
+}
+
+/* Traveling glow effect */
+@keyframes moveGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-button {
+  position: relative;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: transparent;
+  border-radius: 9999px;
+  z-index: -1;
+}
+
+.nav-button::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav-button:not([data-active="true"]):hover::after {
+  opacity: 1;
+  animation: moveGlow 4s ease-in-out infinite;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.uo-gradient-glow {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  transition: font-weight 0.3s ease;
+}
+
+.uo-gradient-glow::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #8b5cf6 0%,
+    #9333ea 50%,
+    #8b5cf6 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+}
+
+.uo-gradient-glow[data-glow='true'] {
+  font-weight: 500;
+}
+
+.uo-gradient-glow[data-glow='true']::before {
+  opacity: 1;
+  animation: flow 2s linear infinite;
+}
+
+@keyframes chrome-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-chrome-gradient {
+  animation: chrome-gradient-flow 2.5s linear infinite;
+}
+
+/* Skill animations */
+@keyframes skillFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes skillGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1),
+                0 0 16px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2),
+                0 0 24px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes skillBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes skillTextGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.skill-pill {
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: default;
+}
+
+.skill-pill::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  background-size: 200% 100%;
+  border-radius: 9999px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.skill-pill:hover::before {
+  opacity: 1;
+  animation: skillBorderFlow 2s linear infinite;
+}
+
+.skill-pill:hover .skill-text {
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #d0d0d0 25%,
+    #ffffff 50%,
+    #d0d0d0 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: skillTextGradient 2s linear infinite;
+}
+
+.skill-pill:hover {
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 16px rgba(255, 255, 255, 0.05);
+}
+
+/* Magnetic movement effect */
+.skill-magnetic {
+  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+} 
