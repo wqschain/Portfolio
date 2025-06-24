@@ -34,12 +34,39 @@ const projects = [
       "FastAPI",
       "Python",
       "Pandas",
-      "Playwright"
+      "SQLAlchemy",
+      "Playwright",
+      "Framer Motion",
+      "BeautifulSoup4",
+      "NumPy"
     ],
-    date: "2024",
+    date: "2025",
     link: "https://github.com/wqschain/Scrynt",
     glow: true,
     video: "/images/projects/Scrynt-demo1.1.mp4"
+  },
+  {
+    title: "Ethyr",
+    description: "Ethyr is a Chrome extension I developed to analyze Ethereum addresses, tokens, and smart contracts using a combination of advanced on-chain heuristics and AI models. Built with a React + TypeScript frontend and a Python FastAPI backend, Ethyr performs real-time risk assessments by integrating blockchain data from sources like Etherscan and Alchemy, and running inference through custom fraud detection models (TLMG4ETH, MetaIFD) and Mistral 7B for natural language explanations. The tool offers insights into token activity, liquidity status, contract verification, transaction patterns, and more presented through a sleek, interactive UI optimized for the Chrome extension experience. Originally a personal tool to assist in identifying potential red flags while navigating Web3, I expanded Ethyr into a shareable product to help others make safer, more informed decisions across the Ethereum ecosystem.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Chrome Extension",
+      "FastAPI",
+      "Python",
+      "Web3.js",
+      "Web3.py",
+      "PyTorch",
+      "HuggingFace",
+      "Uniswap V2/V3",
+      "ERC20/721",
+      "Smart Contracts",
+      "TailwindCSS"
+    ],
+    date: "2025",
+    link: "https://github.com/wqschain/Ethyr/tree/main",
+    glow: true,
+    video: "/images/projects/ethyr-demo1.1.mp4"
   },
   {
     title: "Portfolio",
@@ -54,7 +81,7 @@ const projects = [
       "Shadcn/UI",
       "Vercel"
     ],
-    date: "2024",
+    date: "2025",
     link: "https://github.com/wqschain/Portfolio",
     glow: true
   }
